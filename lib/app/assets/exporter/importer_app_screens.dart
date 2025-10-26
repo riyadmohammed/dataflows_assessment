@@ -1,0 +1,13 @@
+export 'package:dataflows_assessment/app/assets/model/product_model.dart';
+export 'package:dataflows_assessment/app/view/accountScreen/account_page.dart';
+export 'package:dataflows_assessment/app/view/bottom_navigation_page.dart';
+export 'package:dataflows_assessment/app/view/discoverScreen/discover_page.dart';
+export 'package:dataflows_assessment/app/view/homeScreen/home_page.dart';
+export 'package:dataflows_assessment/app/view/homeScreen/widgets/productScreen/product_page.dart';
+export 'package:dataflows_assessment/app/view/inboxScreen/inbox_page.dart';
+export 'package:dataflows_assessment/app/view/mallScreen/mall_page.dart';
+export 'package:dataflows_assessment/app/view/homeScreen/posts_page.dart';
+export 'package:dataflows_assessment/app/view/homeScreen/widgets/productScreen/product_details_page.dart';
+export 'package:dataflows_assessment/app/view/homeScreen/service_page.dart';
+export 'package:dataflows_assessment/app/view/homeScreen/shop_page.dart';
+export 'package:dataflows_assessment/app/view/splash_screen.dart';

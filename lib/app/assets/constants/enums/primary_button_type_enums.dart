@@ -1,0 +1,4 @@
+enum PrimaryButtonType {
+  filled,
+  outlined,
+}
