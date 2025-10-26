@@ -257,3 +257,126 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
   <img src="list_page.png" width="180" height="400" alt="List Page" style="margin: 10px;">
   <img src="post_page.png" width="180" height="400" alt="Post Page" style="margin: 10px;">
 </div>
+
+
+
+
+# Logistics Parcel Delivery System
+
+### Use Case Scenario
+
+1. Modules Definition
+
+Customer-Facing Modules
+
+User Management: Customer registration, login, profile management
+Order Management: Parcel order creation, editing, cancellation
+Tracking Module: Real-time package tracking with status updates
+Branch Locator: Find nearest branch for drop-off
+Payment Calculator: Estimate cost based on weight, dimensions, distance
+Operational Modules
+
+Admin Dashboard: Order assignment, driver management, analytics
+Driver Management: Driver assignment, scheduling, route optimization
+Inventory Management: Parcel scanning, storage, handling
+Payment Processing: Payment collection, invoicing, receipts
+Notification System: Email/SMS alerts for status updates
+Backend Modules
+
+Pricing Engine: Calculate delivery costs dynamically
+Route Optimization: Determine optimal delivery routes
+Analytics & Reporting: Business intelligence and performance metrics
+API Gateway: Centralized API management
+
+2. Customer Order-to-Delivery Flowchart
+
+┌─────────────────┐ ┌──────────────────┐ ┌──────────────────┐
+│ Customer │ │ Online System │ │ Branch Staff │
+│ │ │ │ │ │
+└─────────────────┘ └──────────────────┘ └──────────────────┘
+│ │ │
+│ 1. Create Order │ │
+│───────────────────────>│ │
+│ │ │
+│ 2. Receive Order Conf. │ │
+│<───────────────────────│ │
+│ │ │
+│ 3. Visit Branch │ │
+│─────────────────────────────────────────────>│
+│ │ │
+│ │ 4. Verify & Weigh │
+│ │<─────────────────────│
+│ │ │
+│ 5. Make Payment │ │
+│─────────────────────────────────────────────>│
+│ │ │
+│ 6. Receive Receipt │ │
+│<─────────────────────────────────────────────│
+│ │ │
+│ 7. Track Delivery │ │
+│───────────────────────>│ │
+│ │ │
+│ 8. Delivery Updates │ │
+│<───────────────────────│ │
+
+3. Order Status State Diagram
+
+[Order Created]
+↓
+[Pending Drop-off] → [Cancelled]
+↓
+[At Branch - Verification] → [Rejected]
+↓
+[Payment Pending] → [Payment Failed]
+↓
+[Payment Completed]
+↓
+[Awassing Driver Assignment]
+↓
+[Driver Assigned]
+↓
+[Out for Pickup]
+↓
+[Picked Up]
+↓
+[In Transit]
+↓
+[Out for Delivery]
+↓
+[Delivery Attempted] → [Failed - Retry Scheduled]
+↓
+[Delivered]
+↓
+[Completed]
+
+4. High-Level Microservices Architecture
+
+┌─────────────────────────────────────────────────────────────┐
+│ Client Applications │
+│ ┌─────────────┐ ┌─────────────┐ ┌─────────────────────┐ │
+│ │ Web App │ │ Mobile App │ │ Driver App │ │
+│ └─────────────┘ └─────────────┘ └─────────────────────┘ │
+└─────────────────────────────────────────────────────────────┘
+│
+┌─────────────────────────────────────────────────────────────┐
+│ API Gateway │
+│                (Authentication, Routing)                    │
+└─────────────────────────────────────────────────────────────┘
+│
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│ Order │ │ User │ │ Payment │ │ Tracking │
+│ Service │ │ Service │ │ Service │ │ Service │
+│ │ │ │ │ │ │ │
+│ PostgreSQL │ │ PostgreSQL │ │ PostgreSQL │ │ MongoDB │
+└─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
+│ │ │ │
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│ Driver │ │ Notification│ │ Analytics │ │ Location │
+│ Service │ │ Service │ │ Service │ │ Service │
+│ │ │ │ │ │ │ │
+│ PostgreSQL │ │ Redis │ │ Elastic │ │ Redis │
+└─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
+
+5. Customer Order Creation Sequence Diagram
+
+![img.png](sequence_diagram.png)
