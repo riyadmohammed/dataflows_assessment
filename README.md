@@ -239,10 +239,27 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
     ...
 ```
 
-![img.png](%20home_page.png)
-![img.png](%20home_page2.png)
-![img.png](%20home_page3.png)
-![img.png](%20home_page4.png)
-![img.png](details_page.png)
-![img.png](list_page.png)
-![img.png](post_page.png)
+## App Screenshots
+
+### Home Screens
+<div align="center">
+
+**Home Page Variations**
+
+<img src="home_page.png" width="180" height="400" alt="Home 1">
+<img src="home_page2.png" width="180" height="400" alt="Home 2">
+<img src="home_page3.png" width="180" height="400" alt="Home 3">
+<img src="home_page4.png" width="180" height="400" alt="Home 4">
+
+</div>
+
+### Feature Screens
+<div align="center">
+
+**Application Features**
+
+<img src="details_page.png" width="200" height="400" alt="Details">
+<img src="list_page.png" width="200" height="400" alt="List">
+<img src="post_page.png" width="200" height="400" alt="Post">
+
+</div>
