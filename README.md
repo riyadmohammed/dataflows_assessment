@@ -239,25 +239,21 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
     ...
 ```
 
-## App Screenshots
-
-## App Screenshots
+### App Screenshots
 
 ### Home Pages
+
 <div align="center">
-  <img src="%20home_page.png" width="180" height="400" alt="Home 1">
-  <img src="%20home_page2.png" width="180" height="400" alt="Home 2">
-  <img src="%20home_page3.png" width="180" height="400" alt="Home 3">
-  <img src="%20home_page4.png" width="180" height="400" alt="Home 4">
+  <img src="%20home_page.png" width="180" height="400" alt="Home 1" style="margin: 10px;">
+  <img src="%20home_page2.png" width="180" height="400" alt="Home 2" style="margin: 10px;">
+  <img src="%20home_page3.png" width="180" height="400" alt="Home 3" style="margin: 10px;">
+  <img src="%20home_page4.png" width="180" height="400" alt="Home 4" style="margin: 10px;">
 </div>
 
 ### Feature Screens
+
 <div align="center">
-
-**Application Features**
-
-<img src="details_page.png" width="200" height="400" alt="Details">
-<img src="list_page.png" width="200" height="400" alt="List">
-<img src="post_page.png" width="200" height="400" alt="Post">
-
+  <img src="details_page.png" width="180" height="400" alt="Details Page" style="margin: 10px;">
+  <img src="list_page.png" width="180" height="400" alt="List Page" style="margin: 10px;">
+  <img src="post_page.png" width="180" height="400" alt="Post Page" style="margin: 10px;">
 </div>
