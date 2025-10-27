@@ -47,10 +47,8 @@ class AppointmentDetailsPage extends StatelessWidget {
 Widget detailRowView({String? label, String? value}) {
   return Row(
     children: [
-      SizedBox(
-        width: 90,
-        child: Text("$label:", style: const TextStyle(fontWeight: FontWeight.bold)),
-      ),
+      Text("$label:", style: const TextStyle(fontWeight: FontWeight.bold)),
+
       Expanded(child: Text(value ?? '', overflow: TextOverflow.ellipsis)),
     ],
   );

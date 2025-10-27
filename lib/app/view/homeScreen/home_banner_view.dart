@@ -79,29 +79,32 @@ class _HomeBannerState extends State<HomeBannerView> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            SizedBox(height: 44),
                             Text(
                               index == 0
                                   ? "Welcome to Plantopia 🌿"
                                   : index == 1
-                                  ? "20% Off All Indoor Plants 🪴"
-                                  : "Book Your Next Visit Instantly 📅",
-                              style: const TextStyle(
+                                  ? "20% Off All Indoor Plants"
+                                  : "Book Your Next Visit Instantly",
+                              style: Theme.of(context).textTheme.titleMedium?.copyWith(
                                 color: Colors.white,
-                                fontSize: 20,
+                                fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            const SizedBox(height: 8),
-                            const Text(
+                            const SizedBox(height: 4),
+                            Text(
                               "Discover new plants and personalized care services just for you.",
-                              style: TextStyle(color: Colors.white70, fontSize: 13),
+                              style: Theme.of(
+                                context,
+                              ).textTheme.bodySmall?.copyWith(color: Colors.white70, fontSize: 12),
                             ),
                           ],
                         ),
@@ -113,7 +116,7 @@ class _HomeBannerState extends State<HomeBannerView> {
             ),
 
             Positioned(
-              bottom: 10,
+              bottom: 8,
               left: 0,
               right: 0,
               child: Row(

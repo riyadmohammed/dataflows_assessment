@@ -5,7 +5,7 @@ import 'package:dataflows_assessment/app/assets/model/product_model.dart';
 
 class ProductRepository {
   Future<List<ProductModel>> fetchProducts() async {
-    await Future.delayed(const Duration(seconds: 1)); // Simulate network delay
+    await Future.delayed(const Duration(seconds: 1));
 
     return [
       ProductModel(
