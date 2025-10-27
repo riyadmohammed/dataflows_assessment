@@ -37,10 +37,10 @@ In summary, core idea/components for MVVM in this starter project are:
    ```dart
    class TokenModel {
 
-     TokenModel({this.accessToken, this.refreshToken});
+     TokenModel({this.title, this.description});
 
-     String? accessToken;
-     String? refreshToken;
+     String? title;
+     String? description;
    }
    ```
 
